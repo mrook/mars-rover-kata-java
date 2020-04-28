@@ -1,0 +1,15 @@
+image: gradle:6.3
+
+stages:
+  - test
+
+cache:
+  paths:
+    - build/
+
+test:
+  stage: test
+  script:
+    - gradle check
+  tags:
+    - docker
